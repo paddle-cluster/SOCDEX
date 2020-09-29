@@ -11,8 +11,6 @@
 # 
 # To use these scripts, you will need a Stack Exchange API key that you put in a plain text file named stackApiKey.txt and put in the same directory as this notebook.
 
-# In[6]:
-
 
 # Collect questions, answers and comments
 
@@ -132,9 +130,6 @@ for file in files:
     os.remove(file)
 
 
-# In[10]:
-
-
 # Collect reputation events
 
 from stackapi import StackAPI
@@ -210,9 +205,6 @@ for file in files:
     os.remove(file)
 
 print('Reputation events collected')
-
-
-# In[11]:
 
 
 # Import user data and visualize it
