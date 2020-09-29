@@ -11,7 +11,7 @@
 # 
 # To use these scripts, you will need a Stack Exchange API key that you put in a plain text file named stackApiKey.txt and put in the same directory as this notebook.
 
-# In[ ]:
+# In[6]:
 
 
 # Collect questions, answers and comments
@@ -132,7 +132,7 @@ for file in files:
     os.remove(file)
 
 
-# In[ ]:
+# In[10]:
 
 
 # Collect reputation events
@@ -148,8 +148,9 @@ import os
 # Edit collection settings here:
 community = 'stackoverflow'
 # Set the period for collection
-startDate = datetime(2017, 9, 22)
-endDate = datetime(2020, 9, 15)
+startDate = datetime(2008, 9, 22)
+#endDate = datetime(2020, 9, 29)
+endDate = datetime.today()
 # Set the length of each api call in days. 
 step = 365
 # Set a pause length in seconds to not violate the data cap on the API
@@ -211,7 +212,7 @@ for file in files:
 print('Reputation events collected')
 
 
-# In[ ]:
+# In[11]:
 
 
 # Import user data and visualize it
@@ -322,4 +323,3 @@ for text in leg.get_texts():
 save = plt.gcf()
 plt.show()
 save.savefig(community+'_'+userId+'.png')
-
